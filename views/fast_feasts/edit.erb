@@ -1,0 +1,22 @@
+<h1> Edit Your Order</h1>
+<section class="new-order">
+  <form action="" method="POST">
+  
+    <div>
+      <label for="">Date of Order:</label>
+      <input type="date" name="date" >
+    </div>
+
+    <div>
+      <label for="">Time Of Order:</label>
+      <input type="time" name="time">
+    </div>
+
+    <input type="text" name="booking_name" value="<%= current_user['first_name'] + " " + current_user['last_name'] %>">
+    <input type="text" name="phone" value="<%= current_user["phone"]%>">
+
+    <input type="text" name="meals" placeholder="meal">
+
+    <button>Submit Order</button>
+  </form>
+</section>

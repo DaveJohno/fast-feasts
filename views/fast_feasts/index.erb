@@ -46,7 +46,35 @@
 
 
 <% if logged_in? %>
+  <br>
   <button>
     <a href="/fast_feasts/new-order">Create New Order</a>
   </button>
+  <br>
+
+<section class="orders_list">
+  <h1>Current Orders</h1>
+  <% bookings.each do |order|%>
+
+    <section class="orders">
+      <%= order["booking_name"] %>
+      <%= order["date"] %>
+      <%= order["time"] %>
+      <%= order["meals"] %>
+    </section>
+    <section class="order_buttons">
+    
+    <a href="/fast_feasts/<%= order["id"] %>/edit">Edit</a>
+
+      <form action="/fast_feasts/<%= order['id'] %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+
+        <button>Delete</button>
+      </form>
+    </section>
+  <% end %>
+</section>
+
+
+
 <% end %>

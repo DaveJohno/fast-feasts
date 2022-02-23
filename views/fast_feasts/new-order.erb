@@ -2,20 +2,27 @@
 
 <section class="new-order">
   <form action="" method="POST">
-    <input type="text" name="name" placeholder="Booking Name/Business">
-    <input type="text" name="date" placeholder="Date">
-    <input type="number" name="time" placeholder="Time to eat">
-    <input type="number" name="booking_name" placeholder="Contact Name">
-    <input type="number" name="phone" placeholder="Contact Number">
+  
+    <div>
+      <label for="">Date of Order:</label>
+      <input type="date" name="date" >
+    </div>
 
+    <div>
+      <label for="">Time Of Order:</label>
+      <input type="time" name="time">
+    </div>
+
+    <input type="text" name="booking_name" value="<%= current_user['first_name'] + " " + current_user['last_name'] %>">
+    <input type="text" name="phone" value="<%= current_user["phone"]%>">
 
     <input type="text" name="meals" placeholder="meal">
 
-
     <button>Submit Order</button>
-  
-  
-  
-  
   </form>
 </section>
+
+
+
+
+
