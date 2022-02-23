@@ -1,22 +1,28 @@
 <h1> Edit Your Order</h1>
 <section class="new-order">
-  <form action="" method="POST">
+  <form action="/fast_feasts/<%= order["id"] %>" method="POST">
+  <input type="hidden" name="_method" value="put">
   
     <div>
       <label for="">Date of Order:</label>
-      <input type="date" name="date" >
+      <input type="date" name="date" value="<%get_order(order["id"])["date"]%>">
     </div>
 
     <div>
       <label for="">Time Of Order:</label>
-      <input type="time" name="time">
+      <input type="time" name="time"
+      value="<%= get_order(order["id"])["time"] %>">
     </div>
-
-    <input type="text" name="booking_name" value="<%= current_user['first_name'] + " " + current_user['last_name'] %>">
+    <%# <%binding.pry%>
+    <input type="text" name="booking_name" value="<%= get_order(order["id"])["booking_name"] %>">
     <input type="text" name="phone" value="<%= current_user["phone"]%>">
 
     <input type="text" name="meals" placeholder="meal">
 
     <button>Submit Order</button>
   </form>
+</section>
+
+<section>
+
 </section>

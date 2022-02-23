@@ -150,3 +150,14 @@ section.new-order div > input {
 .orders_list {
   margin: auto 0;
 }
+
+.order_buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.meals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

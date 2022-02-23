@@ -19,7 +19,7 @@ end
 
 post '/fast_feasts/new-order' do
   user_id = session['user_id']
-
+  order_id = 
   meals = params["meals"]
   booking_name = params["booking_name"]
   date = params["date"]
@@ -29,6 +29,8 @@ post '/fast_feasts/new-order' do
   create_order(user_id, booking_name, date, time, meals)
   
   redirect "/fast_feasts/new-order"
+
+
 end
 
 delete '/fast_feasts/:id' do
@@ -36,7 +38,7 @@ delete '/fast_feasts/:id' do
 
   delete_order(id)
 
-  redirect '/fast_feasts/new-order'
+  redirect '/'
 end
 
 
@@ -50,3 +52,19 @@ get '/fast_feasts/:id/edit' do
     order: order
   }
 end  
+
+
+put '/fast_feasts/:id' do
+  user_id = session['user_id']
+  id = params['id']
+  meals = params["meals"]
+  booking_name = params["booking_name"]
+  date = params["date"]
+  time = params["time"]
+  meals = params["meals"]
+
+
+  update_order(id, user_id, booking_name, date, time, meals)
+
+  redirect '/'
+end

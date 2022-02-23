@@ -60,18 +60,27 @@
       <%= order["booking_name"] %>
       <%= order["date"] %>
       <%= order["time"] %>
-      <%= order["meals"] %>
     </section>
+
+    <section class="meals_List"> Meals
+      <section class="meals">
+        <div>
+          <%= order["meals"]%>
+        </div>
+        <div>$</div>
+      </section>
+    </section>
+
     <section class="order_buttons">
-    
-    <a href="/fast_feasts/<%= order["id"] %>/edit">Edit</a>
+      <button><a href="/fast_feasts/<%= order["id"] %>/edit">Edit</a></button>
 
       <form action="/fast_feasts/<%= order['id'] %>" method="POST">
         <input type="hidden" name="_method" value="delete">
 
-        <button>Delete</button>
+      <button>Delete</button>
       </form>
     </section>
+
   <% end %>
 </section>
 

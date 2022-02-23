@@ -8,3 +8,5 @@ ALTER TABLE users ADD COLUMN password_digest TEXT;
 
 
 CREATE TABLE booking(id SERIAL PRIMARY KEY, user_id TEXT, booking_name TEXT,date DATE, time TIME, meals TEXT);
+
+CREATE TABLE order_items(id SERIAL PRIMARY KEY, order_id TEXT, user_id TEXT, meal TEXT, price INT, cooking_instructions TEXT);
