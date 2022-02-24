@@ -13,16 +13,28 @@
       <input type="time" name="time"
       value="<%= get_order(order["id"])["time"] %>">
     </div>
-    <%# <%binding.pry%>
     <input type="text" name="booking_name" value="<%= get_order(order["id"])["booking_name"] %>">
     <input type="text" name="phone" value="<%= current_user["phone"]%>">
-
-    <input type="text" name="meals" placeholder="meal">
-
-    <button>Submit Order</button>
+    <button>Update Booking Information</button>
   </form>
 </section>
 
-<section>
 
-</section>
+    <section class="meals">
+    <form action="">
+      <header class="order_menu"></header>
+      <% meals.each do |food| %>
+        <div>
+          <p><%= food["meal"] %></p>
+          <p>$<%= food["price"] %></p>
+          <P><%= food["cooking_instructions"] %></p>
+        </div>
+      <% end %>
+      <button>Update Meals</button>
+      </form>
+    </section>
+
+
+
+
+<button><a href="/">Finish Updating</a></button>

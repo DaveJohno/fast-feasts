@@ -1,17 +1,18 @@
 <header><h1>Fast Feasts</h1></header>
 <% if logged_in? %>
-    <section class="log-out">
-      <p>Welcome <%= current_user['first_name'] %></p>
+  <section class="log-out">
+    <p>Welcome <%= current_user['first_name'] %></p>
 
-      <form class="" action="/sessions" method="POST">
-        <div>
-          <input type="hidden" name="_method" value="delete">
-          <button>Logout</button>
-        </div>
-
-      </form>
-    </section>  
-  <% end %>
+    <form class="log-out-form" action="/sessions" method="POST">
+      <div class="log-out-buttons">
+        <input type="hidden" name="_method" value="delete">
+       
+        <button><a href="/fast_feasts/new-order">Create Boooking</a></button>
+         <button>Logout</button>
+      </div>
+    </form>
+  </section>  
+<% end %>
 
 
 <% if !logged_in? %>
@@ -47,13 +48,11 @@
 
 <% if logged_in? %>
   <br>
-  <button>
-    <a href="/fast_feasts/new-order">Create New Order</a>
-  </button>
+ 
   <br>
 
 <section class="orders_list">
-  <h1>Current Orders</h1>
+  <h1>Current Bookings</h1>
   <% bookings.each do |order|%>
 
     <section class="orders">
@@ -62,14 +61,6 @@
       <%= order["time"] %>
     </section>
 
-    <section class="meals_List"> Meals
-      <section class="meals">
-        <div>
-          <%= order["meals"]%>
-        </div>
-        <div>$</div>
-      </section>
-    </section>
 
     <section class="order_buttons">
       <button><a href="/fast_feasts/<%= order["id"] %>/edit">Edit</a></button>

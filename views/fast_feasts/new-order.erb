@@ -1,7 +1,7 @@
 <h1>Enter New Order Information</h1>
 
 <section class="new-order">
-  <form action="" method="POST">
+  <form action="/fast_feasts/new-order" method="POST">
   
     <div>
       <label for="">Date of Order:</label>
@@ -16,13 +16,12 @@
     <input type="text" name="booking_name" value="<%= current_user['first_name'] + " " + current_user['last_name'] %>">
     <input type="text" name="phone" value="<%= current_user["phone"]%>">
 
-    <input type="text" name="meals" placeholder="meal">
+    <input type="hidden" name="meals" placeholder="meal">
 
-    <button>Create Order</button>
-  </form>
+    <button>Update Booking Details</button>
 </section>
 
-
+<%#binding.pry%>
 
 
 

@@ -10,3 +10,16 @@ def current_user
     nil
   end  
 end
+
+def has_order?
+  if find_meals_by_user_id == !!session['user_id']
+  end
+end
+
+def current_order
+  if has_order?
+    find_meals_by_order_id()
+  else
+    nil
+  end
+end

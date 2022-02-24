@@ -1,0 +1,25 @@
+<section class="meals">
+  <header class="order_menu"></header>
+    <section class="orders">
+      <%= order["booking_name"] %>
+      <%= order["date"] %>
+      <%= order["time"] %>
+    </section>
+</section>
+
+<section class="new-order">
+  <form action="/fast_feasts/:<%=id%>/add_food" method="POST">
+
+
+
+    <div>
+      <input type="hidden" name="order_id" value="<%=order["id"]%>">
+      <input type="hidden" name="price" value="0">
+      <input type="text" name="meal" placeholder= "meal">
+      <input class="cooking-instructions-box" type="text" name="cooking_instructions" placeholder="cooking instructions" >
+    </div>
+
+
+    <button> Create Order</button>
+  </form>
+</section>
