@@ -22,19 +22,20 @@
 
     <section class="meals">
     <form action="">
-      <header class="order_menu"></header>
-      <% meals.each do |food| %>
-        <div>
-          <p><%= food["meal"] %></p>
-          <p>$<%= food["price"] %></p>
-          <P><%= food["cooking_instructions"] %></p>
-        </div>
-      <% end %>
-      <button>Update Meals</button>
+    <h2>Meals</h2>
+      <header class="order_menu"><% meals.each do |food| %>
+          <p> <%= food["meal"] %> </p> | 
+          
+          <P> <%= food["cooking_instructions"] %> </p>
+           | 
+          <p> $<%= food["price"] %></p>
+      <% end %></header>
+      
+      <%# <button>Update Meals</button> %>
       </form>
     </section>
 
 
 
 
-<button><a href="/">Finish Updating</a></button>
+<button class="back-button"><a href="/">Back</a></button>

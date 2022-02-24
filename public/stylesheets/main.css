@@ -216,6 +216,7 @@ section.new-order label {
 
 section.new-order div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 260px;
@@ -246,33 +247,44 @@ section.new-order div {
 
 .order_buttons > button {
   margin-right: 10px;
+  color: #f0f7f4;
+  background-color: #70abaf;
 }
 
 .meals {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 70%;
   padding: 0px;
-  /* border: none; */
+  background-color: #99e1d9;
   padding: 5px;
   border-radius: 5px;
 }
 
-/* section.meal form {
+section.meal form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
-} */
+}
+section.meals header {
+  width: 100%;
+}
+section.meals h2 {
+  border-bottom: solid 2px #32292f;
+}
 
 .order_menu {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.back-button {
+  margin: 10px;
+  margin-right: 15%;
+  align-self: flex-end;
+  background-color: #99e1d9;
 }
