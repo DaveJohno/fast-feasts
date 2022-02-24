@@ -1,14 +1,22 @@
+/* font-family: 'Comforter', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Mr Dafoe', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'VT323', monospace; */
+
 * {
   box-sizing: border-box;
-  border: solid 1px red;
+  /* border: solid 1px red; */
 }
 body {
+  font-family: "Roboto", sans-serif;
   width: 100%;
   margin: auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ede9eb;
 }
 
 header {
@@ -24,9 +32,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  color: #f0f7f4;
   margin: 0 auto;
   padding: 10px;
+}
+div.login-container {
+  background-color: #32292f;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
 }
 
 section {
@@ -45,14 +59,33 @@ section.login {
   align-items: center;
 }
 
+section.login h1 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  /* font-family: "Comforter", cursive; */
+  font-family: "Fredoka One", cursive;
+  /* font-family: "Mr Dafoe", cursive; */
+}
+
+body > div > section > form > header > h1:nth-child(1) {
+  font-family: "Mr Dafoe", cursive;
+  margin-bottom: -45px;
+  margin-top: 0px;
+}
+
+body > div > section > form > header > h1:nth-child(2) {
+  margin-top: 0px;
+}
+
 section.login form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 70%;
-  padding: 100px;
+  padding: 20px 100px 100px 100px;
   border-radius: 5px;
+  background-color: #f0f7f4;
 }
 
 section.login div {
@@ -65,11 +98,29 @@ section.login input {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
+  color: #f0f7f4;
+  border-radius: 5px;
+  background-color: #70abaf;
+  border: none;
+}
+
+section.login input::placeholder {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #f0f7f4;
+}
+
+.login-form > div {
+  border-top: #32292f solid 2px;
 }
 
 section.login button {
   align-self: flex-end;
   margin-top: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #99e1d9;
 }
 section.login a {
   align-self: flex-end;
@@ -80,18 +131,27 @@ button {
   padding: 5px;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 80%;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
 }
 
 a {
   text-decoration: none;
   border: none;
+  color: inherit;
 }
 
 section.log-out {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 30px;
   padding: 0px;
   border: none;
@@ -108,9 +168,14 @@ section.log-out p {
   margin: 0px;
   font-size: 1.15em;
   width: 50%;
+  font-weight: bold;
+  color: #32292f;
 }
 section.log-out button {
   width: auto;
+  background-color: #32292f;
+  color: #ede9eb;
+  padding: 5px;
 }
 
 section.new-order {
@@ -132,6 +197,7 @@ section.new-order form {
   width: 70%;
   padding: 10px;
   border-radius: 5px;
+  background-color: #f0f7f4;
 }
 
 section.new-order input,
@@ -139,6 +205,13 @@ section.new-order button {
   margin: 5px;
   width: 260px;
   padding: 5px;
+}
+
+section.new-order button {
+  background-color: #99e1d9;
+}
+section.new-order label {
+  font-size: 0.8rem;
 }
 
 section.new-order div {
@@ -156,11 +229,23 @@ section.new-order div {
 } */
 .orders_list {
   margin: auto 0;
+  padding: 20px;
+  text-align: center;
+  border: #70abaf solid;
+  border-radius: 5px;
+  background-color: #f0f7f4;
 }
 
 .order_buttons {
   display: flex;
   justify-content: flex-end;
+  padding: 5px;
+  padding-bottom: 20px;
+  border-bottom: solid 2px #70abaf;
+}
+
+.order_buttons > button {
+  margin-right: 10px;
 }
 
 .meals {

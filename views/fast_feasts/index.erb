@@ -1,7 +1,8 @@
-<header><h1>Fast Feasts</h1></header>
+
 <% if logged_in? %>
+<header><h1>Fast Feasts</h1></header>
   <section class="log-out">
-    <p>Welcome <%= current_user['first_name'] %></p>
+    <p>Welcome, <%= current_user['first_name'] %></p>
 
     <form class="log-out-form" action="/sessions" method="POST">
       <div class="log-out-buttons">
@@ -16,22 +17,32 @@
 
 
 <% if !logged_in? %>
-  <main>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquam culpa soluta! Voluptates debitis provident dignissimos, minus cupiditate veritatis unde rem rerum architecto, accusamus amet totam nam labore voluptatem qui.
-    </p>
-  </main>
+  <div class="login-container">
+    <main>
+      <p> Sign up and enjoy our lunch pre-order system powered by fast feasts. <br> Please submit your order prior to 11.30 am to ensure that we have enough time to prepare
+      <br> <br>
+      Email: functions@clubhousebarandbistro.com <br>
+      Phone: 0260 591079 <br>
+      10 Clubhouse Place
+      Wodonga VIC 3690 
+      <br>  
+      </p>
+    </main>
 
-  <section class="login">
-    <form class="login-form" action="/sessions" method="POST">
-    
-      <input type="text" name="email" placeholder="Email Address:">
-      <input type="password" name="password" placeholder="Password:">
+    <section class="login">
+      <form class="login-form" action="/sessions" method="POST">
+        <header><h1>Fast</h1><h1>Feasts</h1></header>
+        
+        <input type="text" name="email" placeholder="Email Address:">
+        <input type="password" name="password" placeholder="Password:">
 
-      <button>Log In</button>
-      <button><a href="/sign_up">Sign Up</a></button>
-    </form>
+        <button>Log In</button>
+        <div></div>
+        <button><a href="/sign_up">Sign Up</a></button>
+      </form>
 
-  </section>
+    </section>
+  </div>
 <% end %>
 
 
