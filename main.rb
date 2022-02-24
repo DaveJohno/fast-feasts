@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'pry' if development?
-require 'BCrypt'
+require 'bcrypt'
 
 require_relative 'db/db'
 require_relative "models/user"
